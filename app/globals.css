@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #09090b; color: #f4f4f5; font-family: Arial, Helvetica, sans-serif; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+@layer components {
+  .card { @apply rounded-xl border border-zinc-800 bg-zinc-900/70; }
+  .field { @apply w-full rounded-lg border border-zinc-700 bg-zinc-950 px-3 py-2.5 text-sm text-zinc-100 outline-none transition focus:border-blue-500; }
+  .label { @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-zinc-400; }
+  .btn { @apply inline-flex items-center justify-center rounded-lg px-3 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn bg-blue-600 text-white hover:bg-blue-500; }
+  .btn-muted { @apply btn border border-zinc-700 bg-zinc-900 text-zinc-200 hover:bg-zinc-800; }
+  .badge { @apply inline-flex rounded-full border px-2 py-0.5 text-xs font-medium; }
+}
